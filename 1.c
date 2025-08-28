@@ -1,11 +1,11 @@
-#include stdio.h
-#include stdlib.h
-#include omp.h
-#include time.h
-#include getopt.h
-#include string.h
+#include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
+#include <time.h>
+#include <getopt.h>
+#include <string.h>
 
- Function to allocate 2D array
+// Function to allocate 2D array
 float allocate_2d_array(int rows, int cols) {
     float array = (float)malloc(rows  sizeof(float));
     array[0] = (float)malloc(rows  cols  sizeof(float));
@@ -15,13 +15,13 @@ float allocate_2d_array(int rows, int cols) {
     return array;
 }
 
- Function to free 2D array
+// Function to free 2D array
 void free_2d_array(float array) {
     free(array[0]);
     free(array);
 }
 
- Function to generate random array
+// Function to generate random array
 void generate_random_array(float array, int rows, int cols) {
     for (int i = 0; i  rows; i++) {
         for (int j = 0; j  cols; j++) {
@@ -30,7 +30,7 @@ void generate_random_array(float array, int rows, int cols) {
     }
 }
 
- Function to read array from file
+// Function to read array from file
 int read_array_from_file(const char filename, float array, int rows, int cols) {
     FILE fp = fopen(filename, r);
     if (!fp) return 0;
@@ -47,7 +47,7 @@ int read_array_from_file(const char filename, float array, int rows, int cols) {
     return 1;
 }
 
- Function to write array to file
+// Function to write array to file
 void write_array_to_file(const char filename, float array, int rows, int cols) {
     FILE fp = fopen(filename, w);
     fprintf(fp, %d %dn, rows, cols);
@@ -59,8 +59,7 @@ void write_array_to_file(const char filename, float array, int rows, int cols) {
     }
     fclose(fp);
 }
-
- Sequential implementation of 2D convolution
+// Sequential implementation of 2D convolution
 void conv2d_sequential(
     float f, int H, int W,
     float g, int kH, int kW,
@@ -86,7 +85,7 @@ void conv2d_sequential(
     }
 }
 
- Parallel implementation of 2D convolution using OpenMP
+// Parallel implementation of 2D convolution using OpenMP
 void conv2d_parallel(
     float f, int H, int W,
     float g, int kH, int kW,
@@ -113,7 +112,7 @@ void conv2d_parallel(
     }
 }
 
- Wrapper function that calls either sequential or parallel implementation
+// Wrapper function that calls either sequential or parallel implementation
 void conv2d(
     float f, int H, int W,
     float g, int kH, int kW,
@@ -131,7 +130,7 @@ int main(int argc, char argv) {
     char f_file = NULL, g_file = NULL, o_file = NULL;
     int opt;
     
-     Parse command line arguments
+    //Parse command line arguments
     while ((opt = getopt(argc, argv, HWfgok)) != -1) {
         switch (opt) {
             case 'H' H = atoi(optarg); break;
@@ -172,7 +171,7 @@ int main(int argc, char argv) {
         exit(1);
     }
 
-     Allocate output matrix
+    // Allocate output matrix
     output = allocate_2d_array(H, W);
 
      Perform convolution and time it
@@ -181,7 +180,7 @@ int main(int argc, char argv) {
     double end_time = omp_get_wtime();
     printf(Convolution time %.9f secondsn, end_time - start_time);
 
-     Write output if requested
+    // Write output if requested
     if (o_file) {
         write_array_to_file(o_file, output, H, W);
     }
