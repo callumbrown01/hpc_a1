@@ -1,0 +1,144 @@
+OpenMP Configuration:
+  Max threads available: 8
+  Threads set to: 8
+  Number of processors: 8
+  Actual threads in parallel region: 8
+  OMP_NUM_THREADS environment variable: 8
+
+Cache Information (sysconf):
+  L1 Data Cache: 32768 bytes (32.0 KB)
+  L2 Cache: 1048576 bytes (1024.0 KB)
+  L3 Cache: 33554432 bytes (32768.0 KB)
+  Cache Line Size: 64 bytes
+
+Cache Information (/proc/cpuinfo):
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+  cache size	: 1024 KB
+
+Cache Information (CPUID):
+  L2 Cache: 1024 KB
+  L2 Cache Line Size: 64 bytes
+
+Thread 0 cache info:
+  Thread 0: Cache line size = 64 bytes
+  Thread 0: Floats per cache line = 16
+Thread 3 cache info:
+  Thread 3: Cache line size = 64 bytes
+  Thread 3: Floats per cache line = 16
+Thread 1 cache info:
+  Thread 1: Cache line size = 64 bytes
+  Thread 1: Floats per cache line = 16
+Thread 2 cache info:
+  Thread 2: Cache line size = 64 bytes
+  Thread 2: Floats per cache line = 16
+Thread 5 cache info:
+  Thread 5: Cache line size = 64 bytes
+  Thread 5: Floats per cache line = 16
+Thread 4 cache info:
+  Thread 4: Cache line size = 64 bytes
+  Thread 4: Floats per cache line = 16
+Thread 7 cache info:
+  Thread 7: Cache line size = 64 bytes
+  Thread 7: Floats per cache line = 16
+Thread 6 cache info:
+  Thread 6: Cache line size = 64 bytes
+  Thread 6: Floats per cache line = 16
+
+Initialized global cache parameters:
+  Cache line floats: 16
+  Optimal tile size: 48 x 48
+  Base chunk size: 1632
