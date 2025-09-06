@@ -558,7 +558,7 @@ def main():
         traceback.print_exc()
 
     base = csv_filename.rsplit('.', 1)[0]
-    print("\n✅ Analysis complete! Generated files:")
+    print("\n Analysis complete! Generated files:")
     print(f"  - {base}/thread_scaling_analysis.png")
     print(f"  - {base}/problem_size_scaling.png")
     print(f"  - {base}/comprehensive_analysis.png")
