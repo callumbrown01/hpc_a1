@@ -223,7 +223,7 @@ void conv2d_parallel_guided(
 
 
 // Parallel implementation 4: collapse approach
-void conv2d_parallel_tiled(
+void conv2d_parallel_collapse(
     float **f, int H, int W,
     float **g, int kH, int kW,
     float **output
@@ -379,10 +379,10 @@ int main(int argc, char *argv[]) {
 
     // Parallel implementation 4: collapse approach
     double start_par5 = omp_get_wtime();
-    conv2d_parallel_tiled(f, H, W, g, kH, kW, output_par5);
+    conv2d_parallel_collapse(f, H, W, g, kH, kW, output_par5);
     double end_par5 = omp_get_wtime();
     double par5_time = end_par5 - start_par5;
-    printf("Parallel tiled approach time: %.9f seconds (%.2fx speedup)\n", 
+    printf("Parallel collapse approach time: %.9f seconds (%.2fx speedup)\n", 
            par5_time, seq_time / par5_time);
 
     // Find the fastest implementation
@@ -392,7 +392,7 @@ int main(int argc, char *argv[]) {
     
     if (par2_time < fastest_time) { fastest_time = par2_time; fastest_idx = 2; fastest_name = "Dynamic scheduling"; }
     if (par3_time < fastest_time) { fastest_time = par3_time; fastest_idx = 3; fastest_name = "Guided scheduling"; }
-    if (par5_time < fastest_time) { fastest_time = par5_time; fastest_idx = 5; fastest_name = "Tiled approach"; }
+    if (par5_time < fastest_time) { fastest_time = par5_time; fastest_idx = 5; fastest_name = "Collapse approach"; }
 
     printf("\nFastest parallel implementation: %s (%.9f seconds, %.2fx speedup)\n", 
            fastest_name, fastest_time, seq_time / fastest_time);
